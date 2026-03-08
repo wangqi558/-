@@ -1,0 +1,44 @@
+{
+  "name": "rating-platform",
+  "version": "1.0.0",
+  "description": "A rating platform application",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest --config tests/config/jest.config.js",
+    "test:unit": "jest --config tests/config/jest.config.js --testPathPattern=tests/unit",
+    "test:integration": "jest --config tests/config/jest.config.js --testPathPattern=tests/integration",
+    "test:performance": "jest --config tests/config/jest.config.js --testPathPattern=tests/performance --runInBand",
+    "test:security": "jest --config tests/config/jest.config.js --testPathPattern=tests/security",
+    "test:coverage": "jest --config tests/config/jest.config.js --coverage",
+    "test:watch": "jest --config tests/config/jest.config.js --watch",
+    "test:ci": "jest --config tests/config/jest.config.js --ci --coverage --maxWorkers=2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.35.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  }
+}
