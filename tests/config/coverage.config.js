@@ -1,0 +1,62 @@
+module.exports = {
+  coverageReporters: [
+    'text',
+    'text-summary',
+    'lcov',
+    'html',
+    'json',
+    'json-summary',
+  ],
+  coverageDirectory: 'coverage',
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+    './src/auth/': {
+      branches: 90,
+      functions: 90,
+      lines: 90,
+      statements: 90,
+    },
+    './src/ratings/': {
+      branches: 85,
+      functions: 85,
+      lines: 85,
+      statements: 85,
+    },
+    './src/users/': {
+      branches: 85,
+      functions: 85,
+      lines: 85,
+      statements: 85,
+    },
+    './src/admin/': {
+      branches: 90,
+      functions: 90,
+      lines: 90,
+      statements: 90,
+    },
+  },
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    '!src/**/*.d.ts',
+    '!src/**/*.interface.ts',
+    '!src/**/*.dto.ts',
+    '!src/**/*.entity.ts',
+    '!src/**/*.module.ts',
+    '!src/main.ts',
+    '!src/database/migrations/**',
+    '!src/**/*.spec.ts',
+    '!src/**/*.test.ts',
+  ],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/coverage/',
+    '/test/',
+    '/tests/',
+  ],
+};
